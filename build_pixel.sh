@@ -12,10 +12,6 @@ else
   repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 fi
 
-#custom repos
-rm -rf hardware/samsung
-git clone https://github.com/onesmiledx/android_hardware_samsung hardware/samsung
-
 #build
 . build/envsetup.sh
 lunch aosp_a71-ap2a-user
