@@ -14,4 +14,8 @@ fi
 
 #build
 . build/envsetup.sh
-brunch a10s
+lunch lineage_a10s-eng
+mka systemimage
+
+#upload
+curl -F "file=@out/target/product/a10s/system.img" https://temp.sh/upload
