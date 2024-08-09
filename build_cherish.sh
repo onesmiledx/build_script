@@ -14,6 +14,4 @@ fi
 
 #build
 . build/envsetup.sh
-lunch aosp_a71-ap2a-user
-mka installclean
-mka bacon
+brunch a71
