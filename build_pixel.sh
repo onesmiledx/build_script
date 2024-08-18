@@ -2,6 +2,11 @@
 
 #removals
 rm -rf .repo/local_manifests
+rm -rf device/samsung/a71
+rm -rf device/samsung/a71-common
+rm -rf vendor/samsung/a71-common
+rm -rf vendor/samsung/a71
+rm -rf kernel/samsung/a71
 
 #sync
 repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fourteen --git-lfs --depth=1
@@ -14,6 +19,6 @@ fi
 
 #build
 . build/envsetup.sh
-lunch aosp_a71-ap2a-user
+lunch aosp_a71-ap2a-userdebug
 mka installclean
 mka bacon
