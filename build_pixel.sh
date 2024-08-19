@@ -2,11 +2,6 @@
 
 #removals
 rm -rf .repo/local_manifests
-rm -rf device/samsung/a71
-rm -rf device/samsung/a71-common
-rm -rf vendor/samsung/a71-common
-rm -rf vendor/samsung/a71
-rm -rf kernel/samsung/a71
 
 #sync
 repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fourteen --git-lfs --depth=1
