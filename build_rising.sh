@@ -17,4 +17,5 @@ fi
 export RISING_MAINTAINER=Starlix
 export RISING_CHIPSET=Snapdragon 730 4G
 riseup a71 userdebug
+make installclean
 rise b
