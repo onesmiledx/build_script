@@ -20,7 +20,7 @@ rm -rf .repo/local_manifests
 repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs --depth=1
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 rm -rf .repo/local_manifests
-git clone https://github.com/onesmiledx/local_manifest -b los21 .repo/local_manifests
+git clone https://github.com/onesmiledx/local_manifest -b a10s .repo/local_manifests
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 #idk
