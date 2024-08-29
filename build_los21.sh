@@ -18,12 +18,10 @@ rm -rf .repo/local_manifests
 
 #sync
 repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs --depth=1
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+rm -rf .repo/local_manifests
 git clone https://github.com/onesmiledx/local_manifest -b los21 .repo/local_manifests
-if [ -f /opt/crave/resync.sh ]; then
-  /opt/crave/resync.sh
-else
-  repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
-fi
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 #build
 . build/envsetup.sh
