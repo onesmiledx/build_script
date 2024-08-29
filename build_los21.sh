@@ -11,6 +11,7 @@ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 git config --global user.email "beksultanbazuov@gmail.com"
 git config --global user.name "onesmiledx"
+git config --global color.ui false
 
 #removals
 rm -rf .repo/local_manifests
