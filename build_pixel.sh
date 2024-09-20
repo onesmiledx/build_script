@@ -4,7 +4,7 @@
 rm -rf .repo/local_manifests
 
 #sync
-repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fourteen --git-lfs --depth=1
+repo init -u repo init -u https://github.com/SuperiorOS/manifest.git -b fourteen --git-lfs --depth=1
 git clone https://github.com/onesmiledx/local_manifest -b los21 .repo/local_manifests
 if [ -f /opt/crave/resync.sh ]; then
   /opt/crave/resync.sh
@@ -14,6 +14,6 @@ fi
 
 #build
 . build/envsetup.sh
-lunch lineage_a71-ap2a-userdebug
+lunch aosp_a71-ap2a-userdebug
 mka installclean
 mka bacon
