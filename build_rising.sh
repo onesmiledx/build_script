@@ -5,7 +5,7 @@ rm -rf .repo/local_manifests
 
 #sync
 repo init -u https://github.com/RisingTechOSS/android.git -b fourteen --git-lfs --depth=1
-git clone https://github.com/onesmiledx/local_manifest -b los21 .repo/local_manifests
+git clone https://github.com/onesmiledx/local_manifest -b pixelos .repo/local_manifests
 if [ -f /opt/crave/resync.sh ]; then
   /opt/crave/resync.sh
 else
