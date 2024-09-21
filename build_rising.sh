@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #removals
-rm -rf .repo/local_manifests
+rm -rf .repo/local_manifests device/samsung/a71-common device/samsung/a71 kernel/samsung/a71 vendor/samsung/a71 vendor/samsung/a71-common hardware/samsung
 
 #sync
 repo init -u https://github.com/RisingTechOSS/android.git -b fourteen --git-lfs --depth=1
