@@ -15,5 +15,4 @@ fi
 #build
 . build/envsetup.sh
 lunch pixys_a71-ap2a-userdebug
-m installclean
 m pixysrelease
