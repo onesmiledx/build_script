@@ -4,7 +4,6 @@
 rm -rf .repo/local_manifests
 rm -rf device/samsung/a71
 rm -rf device/samsung/a71-common
-rm -rf hardware/qcom-caf/common
 rm -rf kernel/samsung/a71
 rm -rf vendor/samsung/a71
 rm -rf vendor/samsung/a71-common
@@ -19,6 +18,8 @@ else
 fi
 
 #build
+rm -rf hardware/qcom-caf/common
+git clone https://github.com/LineageOS/android_hardware_qcom-caf_common hardware/qcom-caf/common
 . build/envsetup.sh
 lunch pixys_a71-ap2a-userdebug
 m installclean
