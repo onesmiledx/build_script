@@ -9,8 +9,8 @@ rm -rf vendor/samsung/a71
 rm -rf vendor/samsung/a71-common
 
 #sync
-repo init -u https://github.com/PixysOS/manifest -b fourteen-v3 --depth=1
-git clone https://github.com/a71-aosp/local_manifest -b pixys .repo/local_manifests
+repo init --depth=1 -u https://github.com/ProjectBlaze/manifest -b 14 --depth=1
+git clone https://github.com/a71-aosp/local_manifest -b blaze .repo/local_manifests
 if [ -f /opt/crave/resync.sh ]; then
   /opt/crave/resync.sh
 else
@@ -18,9 +18,7 @@ else
 fi
 
 #build
-rm -rf hardware/qcom-caf/common
-git clone https://github.com/LineageOS/android_hardware_qcom-caf_common hardware/qcom-caf/common
 . build/envsetup.sh
-lunch pixys_a71-ap2a-userdebug
-m installclean
-m pixysrelease
+lunch blaze_a71-ap2a-userdebug
+mka installclean
+mka bacon
