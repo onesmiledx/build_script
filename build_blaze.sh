@@ -9,7 +9,7 @@ rm -rf vendor/samsung/a71
 rm -rf vendor/samsung/a71-common
 
 #sync
-repo init --depth=1 -u https://github.com/ProjectBlaze/manifest -b 14 --depth=1
+repo init --depth=1 -u https://github.com/onesmiledx/blaze_manifest -b 14
 git clone https://github.com/a71-aosp/local_manifest -b blaze .repo/local_manifests
 if [ -f /opt/crave/resync.sh ]; then
   /opt/crave/resync.sh
