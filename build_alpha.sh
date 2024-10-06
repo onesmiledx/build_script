@@ -4,8 +4,8 @@
 rm -rf .repo/local_manifests
 
 #sync
-repo init -u repo init -u https://github.com/SuperiorOS/manifest.git -b fourteen --git-lfs --depth=1
-git clone https://github.com/onesmiledx/local_manifest -b los21 .repo/local_manifests
+repo init -u https://github.com/alphadroid-project/manifest -b alpha-14 --git-lfs
+git clone https://github.com/a71-aosp/local_manifest -b alpha .repo/local_manifests
 if [ -f /opt/crave/resync.sh ]; then
   /opt/crave/resync.sh
 else
@@ -14,6 +14,6 @@ fi
 
 #build
 . build/envsetup.sh
-lunch aosp_a71-ap2a-userdebug
+lunch lineage_a71-ap2a-userdebug
 mka installclean
 mka bacon
