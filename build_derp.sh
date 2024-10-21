@@ -5,7 +5,7 @@ rm -rf .repo/local_manifests
 
 #sync
 repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 15 --git-lfs --depth=1
-git clone https://github.com/onesmiledx/local_manifest -b fifteen .repo/local_manifests
+git clone https://github.com/a71-aosp/local_manifest -b fifteen .repo/local_manifests
 if [ -f /opt/crave/resync.sh ]; then
   /opt/crave/resync.sh
 else
