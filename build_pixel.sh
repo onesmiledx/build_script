@@ -4,8 +4,8 @@
 rm -rf .repo/local_manifests
 
 #sync
-repo init -u git@github.com:FeatherROM/android_manifests.git -b 15 --git-lfs
-git clone https://github.com/PixelOS-A71/local_manifests s-b fifteen .repo/local_manifests
+repo init -u https://github.com/FeatherROM/android_manifests.git -b 15 --git-lfs --depth=1
+git clone https://github.com/PixelOS-A71/local_manifests -b fifteen .repo/local_manifests
 if [ -f /opt/crave/resync.sh ]; then
   /opt/crave/resync.sh
 else
