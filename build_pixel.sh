@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #removals
-rm -rf .repo/local_manifests device/samsung/a71-common device/samsung/a71 kernel/samsung/a71 vendor/samsung/a71 vendor/samsung/a71-common hardware/samsung
+rm -rf .repo/local_manifests
 
 #sync
 repo init -u git@github.com:FeatherROM/android_manifests.git -b 15 --git-lfs
