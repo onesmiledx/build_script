@@ -9,6 +9,7 @@ git clone https://github.com/PixelOS-A71/local_manifests -b fifteen .repo/local_
 /opt/crave/resync.sh
 
 #build
+rm -rf hardware/qcom-caf/sm6225
 . build/envsetup.sh
 lunch feather_a71-ap3a-user
 mka installclean
